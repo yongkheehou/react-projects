@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 import "./App.css";
 
@@ -7,17 +7,26 @@ import DemoOutput from "./components/demo/Demo_output";
 
 function App() {
   const [showParagraph, setShowParagraph] = useState(false);
+  const [allowToggle, setAllowToggle] = useState(false);
 
   console.log("1");
 
-  const toggleParagraphHandler = () => {
-    setShowParagraph((prevShowParagraph) => !prevShowParagraph);
+  const toggleParagraphHandler = useCallback(() => {
+    if (allowToggle) {
+      setShowParagraph((prevShowParagraph) => !prevShowParagraph);
+    }
+  }, [allowToggle]); // functions are closures => variables are "stored",
+  // function is not recreated because of useCallback
+
+  const allowToggleHandler = () => {
+    setAllowToggle(true);
   };
 
   return (
     <div className="app">
       <h1>Hi there!</h1>
-      <DemoOutput show={false} />
+      <DemoOutput show={showParagraph} />
+      <Button onClick={allowToggleHandler}>Allow Toggle!</Button>
       <Button onClick={toggleParagraphHandler}>Toggle Paragraph!</Button>
     </div>
   );
