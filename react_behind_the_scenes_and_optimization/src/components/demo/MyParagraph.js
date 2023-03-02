@@ -1,7 +1,7 @@
 import React from "react";
 
 const MyParagraph = (props) => {
-  console.log("3");
+  console.log("Paragraph");
   return <p></p>;
 };
 

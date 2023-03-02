@@ -2,7 +2,7 @@ import React from "react";
 import MyParagraph from "./MyParagraph";
 
 const DemoOutput = (props) => {
-  console.log("2");
+  console.log("demooutput");
   return <MyParagraph>{props.show ? "This is new!" : ""}</MyParagraph>;
 };
 
