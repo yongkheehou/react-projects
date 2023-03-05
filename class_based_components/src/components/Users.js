@@ -24,6 +24,17 @@ class Users extends Component {
     }); // provided by component class (merges old and new states)
   }
 
+  componentDidUpdate() {
+    // try {
+
+    // } catch (err) {
+
+    // }
+    if (this.props.users.length === 0) {
+      throw new Error("No users provided");
+    }
+  }
+
   render() {
     const usersList = (
       <ul>
