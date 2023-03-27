@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 // import { Component, connect } from "react"; // use for class based component code
 
 import classes from "./Counter.module.css";
-import { counterActions } from "../store/index";
+import { counterActions } from "../store/counter";
 
 const Counter = () => {
   const dispatch = useDispatch();
