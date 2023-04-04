@@ -1,7 +1,21 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  // createRoutesFromElements,
+  RouterProvider,
+  // Route,
+} from "react-router-dom";
 
 import HomePage from "./pages/Home";
 import ProductsPage from "./pages/Products";
+
+// const routeDefinitions = createRoutesFromElements(
+//   <Route>
+//     <Route path="/" element={<HomePage />} />
+//     <Route path="/products" element={<ProductsPage />} />
+//   </Route>
+// );
+
+// const router = createBrowserRouter(routeDefinitions);
 
 const router = createBrowserRouter([
   { path: "/", element: <HomePage /> },
