@@ -5,8 +5,10 @@ import classes from "./Root.module.css";
 function RootLayout() {
   return (
     <>
-      <MainNavigation className={classes.content} />
-      <Outlet />
+      <MainNavigation />
+      <main className={classes.content}>
+        <Outlet />
+      </main>
     </>
   );
 }
