@@ -24,7 +24,7 @@ export async function loader() {
 
   if (!response.ok) {
     // return { isError: true, message: "could not fetch" };
-    throw { message: "Could not fetch events" };
+    throw new Response(JSON.stringify({ message: "Could not fetch events" }));
   } else {
     return response;
   }
