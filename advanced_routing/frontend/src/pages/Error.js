@@ -10,6 +10,7 @@ function ErrorPage() {
 
   if (error.data.status === 500) {
     message = JSON.parse(error.data).message;
+    // message = error.data.message;
   }
 
   if (error.data.status === 404) {
