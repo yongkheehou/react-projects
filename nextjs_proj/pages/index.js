@@ -22,7 +22,7 @@ function HomePage(props) {
 export async function getStaticProps() {
   // fetch data from an API
   const client = await MongoClient.connect(
-    "mongodb+srv://yongkheehou:wlkydygbu123!@cluster0.4y89wun.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://yongkheehou:<password>@cluster0.4y89wun.mongodb.net/?retryWrites=true&w=majority"
   );
   const db = client.db();
 
