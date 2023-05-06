@@ -27,7 +27,7 @@ describe("Greeting component", () => {
     const buttonElement = screen.getByRole("button");
     userEvent.click(buttonElement);
 
-    const outputElement = screen.getByText("Changed!");
+    const outputElement = screen.getByText("Changed");
     expect(outputElement).toBeInTheDocument();
   });
 
