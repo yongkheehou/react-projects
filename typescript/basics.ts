@@ -20,20 +20,16 @@ let person: {
     // isEmployee: boolean;
 }
 
-person = {
+type Person = {
     name: 'Max',
     age: 32
-}
+};
 
 // person = {
 //     isEmployee: true
 // }
 
-let people: {
-    name: string, 
-    age: number
-    // isEmployee: boolean;
-}[]
+let people: Person[]
 
 let course: string | number = 'React Guide'
 
