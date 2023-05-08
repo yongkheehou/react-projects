@@ -14,16 +14,18 @@ let hobbies: string[];
 
 hobbies = ['Sports', 'Cooking']
 
-let person: {
-    name: string, 
-    age: number
-    // isEmployee: boolean;
-}
+// let person: {
+//     name: string, 
+//     age: number
+//     // isEmployee: boolean;
+// }
 
 type Person = {
     name: 'Max',
     age: 32
 };
+
+let person: Person;
 
 // person = {
 //     isEmployee: true
