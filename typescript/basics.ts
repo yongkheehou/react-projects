@@ -35,6 +35,6 @@ let people: {
     // isEmployee: boolean;
 }[]
 
-let course = 'React Guide'
+let course: string | number = 'React Guide'
 
-// course = 123 // type inference causes this to return error
+course = 123 // type inference causes this to return error
