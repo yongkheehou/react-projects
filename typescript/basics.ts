@@ -34,3 +34,7 @@ let people: {
     age: number
     // isEmployee: boolean;
 }[]
+
+let course = 'React Guide'
+
+// course = 123 // type inference causes this to return error
