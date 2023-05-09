@@ -36,3 +36,11 @@ let people: Person[]
 let course: string | number = 'React Guide'
 
 course = 123 // type inference causes this to return error
+
+function add(a: number, b: number): number {
+    return a+b
+}
+
+function print_output(value: any) {
+    console.log(value)
+}
