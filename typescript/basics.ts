@@ -44,3 +44,15 @@ function add(a: number, b: number): number {
 function print_output(value: any) {
     console.log(value)
 }
+
+// generics
+function insertAtBeginning<T>(array: T[], value: T) {
+    const newArray = [value, ...array] // original array does not change
+    return newArray
+}
+
+const demoArray = [1,2,3]
+
+const updatedArray = insertAtBeginning(demoArray, -1) // gives [-1,1,2,3]
+
+// updatedArray[0].split('') // <> tells TS that type of updatedArray is number
